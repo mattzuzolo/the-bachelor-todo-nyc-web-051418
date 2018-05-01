@@ -70,13 +70,20 @@ def get_average_age_for_season(data, season)
   data.each do |season, details|
       details.each do |individual_info|
         
+<<<<<<< HEAD
         
+=======
+        binding.pry
+>>>>>>> 0e2a35e572d879c63eee0ec9337a338abd6e9459
        age_array << individual_info["age"]
         
  
     end #end details each
+<<<<<<< HEAD
     
     binding.pry
+=======
+>>>>>>> 0e2a35e572d879c63eee0ec9337a338abd6e9459
   end #end data each  
   
   
