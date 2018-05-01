@@ -2,36 +2,104 @@ require 'pry'
 
 def get_first_name_of_season_winner(data, season)
   
-
-  data.each do |season_key, details|
+  data[season].each do |details|
     
-    if season_key == season
-    
-        if data["status"] == "Winner"
-          return data["name"].split(" ").first
+        if details["status"] == "Winner"
+          return details["name"].split(" ").first
         end #end if winner  
-    
-    end #end season if
 
   end #end data each
   
-  #return the first name of specified season's winner
 end #end method
 
-#get_first_name_of_season_winner(data, "season 29")
+
 
 def get_contestant_name(data, occupation)
-  # code here
-end
+    data.each do |season, details|
+      details.each do |individual_info|
+      
+        if individual_info["occupation"] == occupation
+          return individual_info["name"]
+        end  
+      
+      end #end details each  
+   end #end data each  
+end #end method
+
+
 
 def count_contestants_by_hometown(data, hometown)
-  # code here
+ 
+  counter = 0
+ 
+  data.each do |season, details|
+      details.each do |individual_info|
+        
+        if individual_info["hometown"] == hometown
+            counter += 1
+        end  
+ 
+    end #end details each
+  end #end data each  
+ 
+ counter
+ 
 end
+
+
 
 def get_occupation(data, hometown)
-  # code here
+  data.each do |season, details|
+      details.each do |individual_info|
+        
+        if individual_info["hometown"] == hometown
+            return individual_info["occupation"]
+        end  
+ 
+    end #end details each
+  end #end data each  
 end
 
+
+
+
 def get_average_age_for_season(data, season)
-  # code here
+  
+  age_array = []
+  
+  data.each do |season, details|
+      details.each do |individual_info|
+        
+        
+       age_array << individual_info["age"]
+        
+ 
+    end #end details each
+    
+    binding.pry
+  end #end data each  
+  
+  
+       
+      #  individual_info["age"]
+       
+  
+  
+    #  age_array.map {|i| i.to_i }
+      
+  
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
