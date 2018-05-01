@@ -70,33 +70,29 @@ def get_average_age_for_season(data, season)
   data.each do |season, details|
       details.each do |individual_info|
         
-<<<<<<< HEAD
         
-=======
-        binding.pry
->>>>>>> 0e2a35e572d879c63eee0ec9337a338abd6e9459
        age_array << individual_info["age"]
         
  
     end #end details each
-<<<<<<< HEAD
-    
-    binding.pry
-=======
->>>>>>> 0e2a35e572d879c63eee0ec9337a338abd6e9459
   end #end data each  
   
-  
-       
-      #  individual_info["age"]
-       
-  
-  
-    #  age_array.map {|i| i.to_i }
-      
-  
-end
 
+  
+    age_array.map {|i| i.to_f }
+    
+    binding.pry
+    
+    age_array_count = age_array.length
+    
+    age_array_total = age_array.inject {|sum, n| sum + n}
+    
+    
+    
+     age_array_total/age_array_count 
+    
+    
+end
 
 
 
