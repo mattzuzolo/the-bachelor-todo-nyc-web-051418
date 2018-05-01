@@ -65,13 +65,13 @@ end
 
 def get_average_age_for_season(data, season)
   
-  age_array = []
+  sum_of_age = 0
   
   data.each do |season, details|
       details.each do |individual_info|
         
         
-       age_array << individual_info["age"]
+       sum_of_age += individual_info["age"].to_f
         
  
     end #end details each
