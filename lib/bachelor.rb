@@ -72,7 +72,7 @@ def get_average_age_for_season(data, season)
       details.each do |individual_info|
         
         
-       sum_of_age += individual_info["age"].to_i
+       sum_of_age += individual_info["age"].to_f
        counter += 1
         
  
