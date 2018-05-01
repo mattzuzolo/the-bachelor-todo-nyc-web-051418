@@ -85,7 +85,7 @@ def get_average_age_for_season(data, season)
     
     age_array_count = age_array.length
     
-    
+    total_sum = age_array.reduce(:+)
     
 end
 
