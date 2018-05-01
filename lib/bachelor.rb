@@ -87,6 +87,8 @@ def get_average_age_for_season(data, season)
     
     total_sum = age_array.reduce(:+)
     
+    binding.pry
+    
     average = total_sum / age_array_count
     
 end
