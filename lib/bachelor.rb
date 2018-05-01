@@ -65,31 +65,28 @@ end
 
 def get_average_age_for_season(data, season)
   
-  age_array = []
+  sum_of_age = 0
+  counter = 0
   
-  data.each do |season, details|
-      details.each do |individual_info|
+  # data.each do |season, details|
+  #   details.each do |individual_info|
+  
+  data[season].each do |individual_info|
         
         
-       age_array << individual_info["age"]
+       sum_of_age += individual_info["age"].to_f
+       counter += 1
         
- 
-    end #end details each
-    
-    binding.pry
-  end #end data each  
+ end
+  #   end #end details each
+  # end #end data each  
   
-  
-       
-      #  individual_info["age"]
-       
-  
-  
-    #  age_array.map {|i| i.to_i }
-      
-  
-end
 
+  
+    (sum_of_age/counter).round(0)
+    #binding.pry
+    
+end
 
 
 
