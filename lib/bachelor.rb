@@ -82,7 +82,7 @@ def get_average_age_for_season(data, season)
 
   
     (sum_of_age/counter).round(0)
-    
+    binding.pry
     
 end
 
