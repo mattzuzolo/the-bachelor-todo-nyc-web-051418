@@ -77,15 +77,10 @@ def get_average_age_for_season(data, season)
     end #end details each
   end #end data each  
   
-
+binding.pry
   
-    age_array.map {|i| i.to_f }
+
     
-    
-    
-    binding.pry
-    
-    average = total_sum / age_array_count
     
 end
 
